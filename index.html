@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/7827fe3d97.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/logo.jpg" class="logo">
+            <ul id="sidemenu">
+               <li><a href="#header">Home</a></li>
+               <li><a href="#about">About</a></li> 
+               <li><a href="#services">Services</a></li>  
+               <li><a href="#contact">Contact</a></li>
+            <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>     
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+    <div class="headertext">
+        <p>Web Designer/Developer</p>
+        <h1>Hi I'm <span>Vignesh</span></h1><br>From Chennai</h1>
+    </div>
+    </div>
+</div>
+<!--   --------about------   -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="aboutcol1">
+                <img src="images/user.png">
+            </div>
+            <div class="aboutcol2">
+                <h1 class="subtitle">About Me</h1>
+                <p>As a recent graduate in B.E in Civil Engineering,During pursuing my degree I got intrest in How Web pages Developed or designed and start 
+                    to learn and apply my knowledge, hardwork into the web development and start to work into projects. Throughout my academic journey, I have honed my communication and teamwork skills. 
+                    I am committed to continuous improvement and embracing new technologies to stay ahead in the ever-evolving professional landscape. I am now seeking an 
+                    opportunity to contribute my  my passion and dedication to a dynamic organization that values innovation and fosters growth. 
+                    passion and dedication to a dynamic organization that values innovation and fosters growth.
+                </p>
+                <div class="tabtitles">
+                    <p class="tablinks activelink" onclick="opentab('skills')">Skills</p>
+                    <p class="tablinks" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tableconts activetab" id="skills">
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                    </ul>            
+                </div>
+                <div class="tableconts" id="education">
+                    <ul>
+                        <li><span style="color: #b54769;">2019-23 (B.E)</span><br>Vel Tech Multi Tech Engineering College</li>
+                        <li><span style="color: #b54769;">2017-19 (HSC)</span><br>P.A.K Palaniswamy Hr Sec School</li>
+                        <li><span style="color: #b54769;">2016-17 (SSLC)</span><br>P.A.K Palaniswamy Hr Sec School</li>
+                    </ul>            
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-----------services------------>
+<div class="container" id="services">
+    <h1 class="subtitle">My Work</h1>
+    <div class="serviceslist">
+    <div>
+        <i class="fa-solid fa-code"></i>    
+        <h2>Website Clone</h2>
+        <p>Here is my sample project of clone websit of spotify and posted in my github account.Check it out</p>
+        <a href="https://github.com/vickyvignesh-33">learn more</a>
+    </div>
+    <div>
+        <i class="fa-solid fa-crop-simple"></i>    
+        <h2>JavaScript Begniners Projects</h2>
+        <p>Here are some JavaScript begniners projects using vanilla JavaScript(StopWatch program & Rock, Paper, Scissors & Tic,Tac,Toe)
+           and posted in my github account.Check it out.
+        </p>
+        <a href="https://github.com/vickyvignesh-33">learn more</a>
+    </div>
+    </div>
+</div>
+<!-----------contact------------>
+<div id="contact">
+    <div class="container">
+    <div class="row">
+     <div class="contactleft">      
+     <h1 class="subtitle">Contact Me</h1>
+     <p><i class="fa-solid fa-paper-plane"></i>vigneshr3333@gmail.com</p>
+     <p><i class="fa-solid fa-square-phone-flip"></i>+91 9176104255</p>
+     <div class="socialicons">
+        <a href="https://www.linkedin.com/in/vigneshr33335"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://github.com/vickyvignesh-33"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.instagram.com/__vignesh_vicky___/"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=100050220623033"><i class="fa-brands fa-facebook"></i></a>
+     </div>
+     </div>  
+     <div class="contactright">
+        <a href="images/Resume.pdf" download class="btn">Download Resume</a>
+     </div>
+    </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright &copy; 2023 Vignesh</p>
+    </div>
+</div>
+<script>
+    var tablinks = document.getElementsByClassName("tablinks");
+    var tabconts = document.getElementsByClassName("tableconts");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("activelink");
+        }
+        for(tabcont of tabconts){
+            tabcont.classList.remove("activetab");
+        }
+        event.currentTarget.classList.add("activelink");
+        document.getElementById(tabname).classList.add("activetab")
+    }
+</script>
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+    function openmenu(){
+         sidemenu.style.right="0";
+    }
+    function closemenu(){
+        sidemenu.style.right="-200px";
+    }
+</script>
+</body>
+</html>
