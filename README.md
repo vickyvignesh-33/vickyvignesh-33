@@ -1,6 +1,6 @@
 - 👋 Hi, I’m vignesh
 - 🎓 2k23 Graduated
-- 💻 Know (HTML,CSS,javaScript,Java,Spring Boot,MySQL)
+- 💻 Know (HTML,CSS,javaScript,Java,Spring Boot,SQL)
 - 👷‍♂️   I’m Looking For job
 - 📫 How to reach me vigneshr3333@gmail.com
 
